@@ -1,0 +1,23 @@
+/* =========================================
+   RTL SUPPORT
+========================================= */
+html[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+}
+
+html[dir="rtl"] body {
+    direction: rtl;
+}
+
+/* Margin and Padding Reversals */
+html[dir="rtl"] .ml-auto { margin-right: auto; margin-left: 0; }
+html[dir="rtl"] .mr-auto { margin-left: auto; margin-right: 0; }
+
+/* Icon mirroring for specific directional icons */
+html[dir="rtl"] .icon-forward { transform: scaleX(-1); }
+html[dir="rtl"] .icon-back { transform: scaleX(-1); }
+
+/* Flexbox ordering if necessary */
+html[dir="rtl"] .flex-row-reverse { flex-direction: row; }
+html[dir="rtl"] .flex-row { flex-direction: row-reverse; }

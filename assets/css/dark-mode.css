@@ -1,0 +1,51 @@
+/* =========================================
+   DARK MODE
+========================================= */
+body.dark-mode {
+    --bg-color: #0F172A;
+    --bg-alt: #1E293B;
+    --card-bg: #1E293B;
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --border-light: rgba(255, 255, 255, 0.05);
+
+    /* Shadows & Glass */
+    --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.2);
+    --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.4);
+    --glass-bg: rgba(30, 41, 59, 0.85);
+}
+
+body.dark-mode .card {
+    border-color: var(--border-color);
+}
+
+body.dark-mode .card:hover {
+    border-color: rgba(79, 70, 229, 0.4);
+}
+
+body.dark-mode .btn-secondary {
+    background: var(--bg-alt);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+body.dark-mode .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--primary);
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background: var(--bg-alt);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+body.dark-mode input:focus,
+body.dark-mode select:focus,
+body.dark-mode textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
