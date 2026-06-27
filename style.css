@@ -83,6 +83,7 @@ body.light-theme select {
 html {
     scroll-behavior: smooth;
     background-color: var(--bg-color);
+    overflow-x: hidden;
 }
 
 body {
@@ -113,7 +114,7 @@ img {
 .container {
     max-width: var(--container-width);
     margin: 0 auto;
-    padding-inline: 5vw;
+    padding: 0 5%;
     position: relative;
     z-index: 10;
 }
@@ -313,7 +314,7 @@ body.light-theme .navbar {
 }
 
 .logo svg {
-    margin-right: 12px;
+    margin-inline-end: 12px;
     color: var(--primary);
 }
 
@@ -334,7 +335,8 @@ body.light-theme .navbar {
     color: var(--primary);
 }
 
-#themeToggle:hover, #rtlToggle:hover {
+#themeToggle:hover,
+#rtlToggle:hover {
     color: var(--primary) !important;
     border-color: var(--primary) !important;
 }
@@ -414,10 +416,12 @@ body.light-theme .navbar {
     background: #fff !important;
     color: #060B14 !important;
 }
+
 .hero .btn-secondary {
     color: #fff !important;
     border-color: rgba(255, 255, 255, 0.3) !important;
 }
+
 .hero .btn-secondary:hover {
     background: rgba(255, 255, 255, 0.1) !important;
     color: #fff !important;
@@ -1203,6 +1207,10 @@ html[dir="rtl"] .logo {
 }
 
 @media (max-width: 1024px) {
+    .container {
+        padding: 0 20px;
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
@@ -1343,6 +1351,10 @@ html[dir="rtl"] .logo {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1363,33 +1375,33 @@ html[dir="rtl"] .logo {
     .deliverables-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .deliverable-showcase {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
+
     .deliverable-showcase:nth-child(even) {
         direction: ltr;
     }
-    
+
     .del-tags {
         justify-content: center;
     }
-    
+
     .del-content {
         text-align: center;
     }
-    
+
     .process-steps::before {
         display: none;
     }
-    
+
     .step-item {
         padding-left: 0;
         text-align: center;
     }
-    
+
     .step-marker {
         position: relative;
         margin: 0 auto 1.5rem;
@@ -1399,6 +1411,7 @@ html[dir="rtl"] .logo {
 
     .hero-actions {
         flex-direction: column;
+        align-items: center;
     }
 
     .ba-container {
